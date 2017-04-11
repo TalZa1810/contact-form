@@ -35,16 +35,31 @@ router.post('/submit', function(req, res, next){
 
 router.get('/get-data', function (req, res, next) {
 
+    mongo.connect(url, function (err, db) {
+        assert.equal(null, err);
+        var cursor = db.collection('user-data').find();
+        cursor.forEach(function (doc, err) {
+
+        });
+    });
+
 });
 
 router.post('/insert', function (req, res, next){
   var user = {
-    email: req.body.email;
-    password: req.body.password;
-    confirmPassword: req.body.confirmPassword;
+    email: req.body.email,
+    password: req.body.password,
+    confirmPassword: req.body.confirmPassword
   };
-//SHOULD CONTINUE HERE
 
+  mongo.connect(url, function (err, db) {
+    assert.equal(null, err);
+    db.collection('user-data').insertOne(user, function (err, result) {
+        assert.equal(null, error);
+        console.log('data inserted');
+        db.close();
+    });
+  });
 });
 
 module.exports = router;

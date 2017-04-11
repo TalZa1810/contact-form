@@ -1,12 +1,15 @@
 var express = require('express');
 var router = express.Router();
+var mongo = require('mongodb').MongoClient;
+var assert = require('assert');
+
+var url= 'mongodb://localhost:27017/users';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Form Validation', success: req.session.success, errors: req.session.errors  });
     req.session.errors = null;
     req.session.success = null;
-
 });
 
 /* list of validators: https://github.com/chriso/validator.js#validators */
@@ -26,6 +29,22 @@ router.post('/submit', function(req, res, next){
   }
 
   res.redirect('/');
+});
+
+
+
+router.get('/get-data', function (req, res, next) {
+
+});
+
+router.post('/insert', function (req, res, next){
+  var user = {
+    email: req.body.email;
+    password: req.body.password;
+    confirmPassword: req.body.confirmPassword;
+  };
+//SHOULD CONTINUE HERE
+
 });
 
 module.exports = router;

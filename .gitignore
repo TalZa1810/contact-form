@@ -1,0 +1,19 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/workspace.xml
+contact-form/node_modules/.bin/semver
+contact-form/node_modules/.bin/semver.cmd
+contact-form/node_modules/bson/
+contact-form/node_modules/buffer-shims/
+contact-form/node_modules/core-util-is/
+contact-form/node_modules/es6-promise/
+contact-form/node_modules/isarray/
+contact-form/node_modules/mongodb-core/
+contact-form/node_modules/mongodb/
+contact-form/node_modules/process-nextick-args/
+contact-form/node_modules/readable-stream/
+contact-form/node_modules/require_optional/
+contact-form/node_modules/resolve-from/
+contact-form/node_modules/semver/
+contact-form/node_modules/string_decoder/
+contact-form/node_modules/util-deprecate/

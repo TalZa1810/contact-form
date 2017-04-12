@@ -7,7 +7,10 @@ var bodyParser = require('body-parser');
 var hbs = require('express-handlebars');
 var expressValidator = require('express-validator');
 var expressSession = require('express-session');
+var mongoose = require('mongoose');
 
+mongoose.connect('mongodb://localhost/testDB');
+require('./model/user.model');
 var index = require('./routes/index');
 
 
@@ -34,6 +37,7 @@ app.use(expressSession({secret: 'max', saveUninitialized: false, resave: false})
 
 //define which pages to render
 app.use('/', index);
+
 
 
 // catch 404 and forward to error handler

@@ -1,15 +1,12 @@
 <h1>{{title}}</h1>
 
 {{#if success}}
-
     <section class="success">
         <h2>Successful validation </h2>
     </section>
-
 {{else}}
 
     {{#if errors}}
-
         <section class="errors">
             {{# each errors}}
                 <li> {{this.msg}}</li>
@@ -17,24 +14,40 @@
         </section>
     {{/if}}
 
-<form action="/submit" method="post">
-    <div class="input">
-        <label for="email">Email </label>
-        <input type="email" id="email" name="email">
-    </div>
+    <form action="/insert" method="post">
 
-    <div class="input">
-        <label for="password">Password </label>
-        <input type="password" id="password" name="password">
-    </div>
+        <div class="insert form-group">
+            <label for="name">Name </label>
+            <div class="col-sm-4">
+                <input type="text" id="name" name="name">
+            </div>
+        </div>
 
-    <div class="input">
-        <label for="confirmPassword">Confirm Password </label>
-        <input type="password" id="confirmPassword" name="confirmPassword">
-    </div>
+        <div class="insert form-group">
+            <label for="email">Email </label>
+            <div class="col-sm-4">
+                <input type="email" id="email" name="email">
+            </div>
+        </div>
 
+        <div class="insert form-group">
+            <label for="password">Password </label>
+            <div class="col-sm-4">
+                <input type="password" id="password" name="password">
+            </div>
+        </div>
 
-    <button type="submit"> Sign Up </button>
-</form>
+        <div class="insert form-group">
+            <label for="confirmPassword">Confirm Password </label>
+            <div class="col-sm-4">
+                <input type="password" id="confirmPassword" name="confirmPassword">
+            </div>
+        </div>
 
+        <div class="insert form-group">
+            <div class="col-sm-4">
+                <button type="submit"> Sign Up </button>
+            </div>
+        </div>
+    </form>
 {{/if}}

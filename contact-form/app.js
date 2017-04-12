@@ -9,6 +9,7 @@ var expressValidator = require('express-validator');
 var expressSession = require('express-session');
 var mongoose = require('mongoose');
 
+
 mongoose.connect('mongodb://localhost/testDB');
 require('./model/user.model');
 var index = require('./routes/index');
@@ -26,14 +27,10 @@ app.set('view engine', 'hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(expressValidator());
-
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(expressSession({secret: 'max', saveUninitialized: false, resave: false}));
-
 
 //define which pages to render
 app.use('/', index);

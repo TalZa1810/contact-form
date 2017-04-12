@@ -1,15 +1,10 @@
-<h1>{{title}}</h1>
-
-{{#if success}}
-    <section class="success">
-        <h2>Successful validation </h2>
-    </section>
-{{else}}
+<div class="talza-form">
+    <h1>{{title}}</h1>
 
     {{#if errors}}
         <section class="errors">
             {{# each errors}}
-                <li> {{this.msg}}</li>
+                <div>  {{this.msg}} </div>
             {{/each}}
         </section>
     {{/if}}
@@ -17,30 +12,30 @@
     <form action="/insert" method="post">
 
         <div class="insert form-group">
-            <label for="name">Name </label>
+            <label for="name" class="form-label">Name </label>
             <div class="col-sm-4">
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" required>
             </div>
         </div>
 
         <div class="insert form-group">
-            <label for="email">Email </label>
+            <label for="email" class="form-label">Email </label>
             <div class="col-sm-4">
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
             </div>
         </div>
 
         <div class="insert form-group">
-            <label for="password">Password </label>
+            <label for="password" class="form-label">Password </label>
             <div class="col-sm-4">
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
             </div>
         </div>
 
         <div class="insert form-group">
-            <label for="confirmPassword">Confirm Password </label>
+            <label for="confirmPassword" class="form-label">Confirm Password </label>
             <div class="col-sm-4">
-                <input type="password" id="confirmPassword" name="confirmPassword">
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
             </div>
         </div>
 
@@ -50,4 +45,4 @@
             </div>
         </div>
     </form>
-{{/if}}
+</div>

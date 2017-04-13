@@ -3,6 +3,54 @@ body {
   font: 14px "Roboto", Arial, sans-serif;
 }
 
+.talza-form {
+  margin: 0px auto;
+  padding: 20px;
+  max-width: 200px;
+}
+
+.thank-you {
+  margin: 0px auto;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.thank-you-info{
+  width: 500px;
+  padding: 10px;
+  font-family: Verdana, sans-serif;
+  margin: 10px 0px 2px 30px;
+}
+
+.login-title{
+  font-family: Shadows Into Light;
+  font-size: 40px;
+  font-weight: bold;
+  width: 800px;
+  padding: 10px;
+  max-width: 500px;
+}
+
+.thank-you-title{
+  font-family: Shadows Into Light;
+  font-size: 40px;
+  font-weight: bold;
+  width: 500px;
+  padding: 10px;
+  max-width: 500px;
+  margin: 0px 40px 0px
+
+}
+
+.form-label{
+  font-family: Chalkduster, fantasy	;
+  margin: 50px 0px 50px 0px
+}
+
+.form-group{
+  margin: 20px 0px 0px 0px
+}
+
 a {
   color: #00B7FF;
 }

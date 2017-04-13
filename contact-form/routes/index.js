@@ -44,7 +44,7 @@ router.post('/insert', function (req, res, next){
         //save the data to the database
         newUser.save(function(err, user){
             if (err){
-                console.error("Error has occured");
+                console.error("Error has occurred");
                 res.status(500).send("Error on saving to DB");
             } else {
                 console.log('Everything was alright! Hooray!');

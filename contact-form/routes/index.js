@@ -25,7 +25,7 @@ router.post('/insert', function (req, res, next){
     //check validity of the form
     req.check('email', 'Invalid email address').isEmail(); //the name should be a similar to the name (property) of the form field
     // making sure the password has minimum of 4 letters and that it is equals to the password confirmation field
-    req.check('password', 'Password is invalid').isLength({min:4}).equals(req.body.confirmPassword);
+    //req.check('password', 'Password is invalid').isLength({min:4}).equals(req.body.confirmPassword);
 
     var errors = req.validationErrors();
     if(errors){

@@ -1,13 +1,4 @@
 <div class="talza-form">
-    <div class="login-title"> {{title}}</div>
-
-    {{#if errors}}
-        <section class="errors">
-            {{# each errors}}
-                <div>  {{this.msg}} </div>
-            {{/each}}
-        </section>
-    {{/if}}
 
     <form action="/insert" method="post">
 
@@ -32,16 +23,10 @@
             </div>
         </div>
 
-        <div class="insert form-group">
-            <label for="confirmPassword" class="form-label">Confirm Password </label>
-            <div class="col-sm-4">
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-            </div>
-        </div>
 
         <div class="insert form-group">
             <div class="col-sm-4">
-                <button type="submit"> Sign Up </button>
+                <button type="submit"> SUBMIT </button>
             </div>
         </div>
     </form>
